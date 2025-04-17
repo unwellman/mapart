@@ -1,0 +1,14 @@
+[project]
+name = "mapart"
+version = "0.0.0"
+dependencies = [
+	"numpy",
+	"matplotlib",
+	"pillow",
+	"pyyaml",
+	"pytest",
+]
+
+[build-system]
+requires = ["setuptools"]
+
