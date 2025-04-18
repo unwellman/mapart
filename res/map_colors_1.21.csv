@@ -1,0 +1,63 @@
+ID,Color,RGB,Blocks
+0 NONE,,Transparent,"air, void air, cave air, barrier, cake (including cake with candles), powered rail, detector rail, torchs, redstone wire, ladder, rail, lever, buttons, repeater, tripwire hook, tripwire, flower pot (including potted plants), head, comparator, activator rail, end rod, glass, glass pane, nether portal, stained glass pane (all colors), structure void, iron bars, chain, light block, pink petals‌[BE only], pointed dripstone‌[BE only], redstone lamp‌[BE only]"
+1 GRASS,,"127, 178, 56","grass block, slime block"
+2 SAND,,"247, 233, 163","sand, suspicious sand, birch (planks, log (vertical), stripped log, wood, stripped wood, sign, pressure plate, trapdoor, stairs, slab, fence gate, fence, door), sandstone (all variants, all slabs, all stairs, all walls), glowstone, end stone, end stone bricks (slab, stairs, wall), bone block, turtle egg, scaffolding, candle, ochre froglight, frogspawn"
+3 WOOL,,"199, 199, 199","cobweb, mushroom stem, bed (head), white candle"
+4 FIRE,,"255, 0, 0","lava, TNT, fire, redstone block"
+5 ICE,,"160, 160, 255","ice, frosted ice, packed ice, blue ice"
+6 METAL,,"167, 167, 167","block of iron, iron door, brewing stand, heavy weighted pressure plate, iron trapdoor, lantern, anvil (all damage levels), grindstone, lodestone‌[JE only], heavy core, pale oak leaves, pale oak sapling, copper trapdoor‌[BE only] (including waxed and exposed/weathered variations)"
+7 PLANT,,"0, 124, 0","sapling, flowers, wheat, sugar cane, pumpkin stem, melon stem, lily pad, cocoa, carrots, potatoes, beetroots, sweet berry bush, grass‌[JE only], tall_grass, fern‌[JE only], large fern, vines‌[JE only], leaves‌[JE only] (except pale oak leaves, cherry leaves), cactus, bamboo, cave vines, spore blossom, (flowering) azalea, dripleaf (big and small), pink petals‌[JE only], wildflowers, bush, torchflower seeds, pitcher pod, hanging roots‌[BE only]"
+8 SNOW,,"255, 255, 255","snow, snow block, white (bed (foot), wool, stained glass, carpet, shulker box, glazed terracotta, concrete, concrete powder), powder snow, lodestone‌[BE only]"
+9 CLAY,,"164, 168, 184","clay, heavy core"
+10 DIRT,,"151, 109, 77","dirt, coarse dirt, farmland, dirt path, granite (slab, stairs, wall), polished granite (slab, stairs), jungle (planks, log (vertical), stripped log, wood, stripped wood, sign, pressure plate, trapdoor, stairs, slab, fence gate, fence, door), jukebox, brown mushroom block, rooted dirt, hanging roots‌[JE only], packed mud"
+11 STONE,,"112, 112, 112","stone (slab, stairs), andesite (slab, stairs, wall), polished andesite (slab, stairs), cobblestone (slab, stairs, wall), bedrock, gold ore, iron ore, coal ore, lapis lazuli ore, dispenser, mossy cobblestone (slab, stairs, wall), monster spawner, diamond ore, furnace, stone pressure plate, redstone ore, stone bricks (all variants, all slabs, all stairs, all walls), emerald ore, ender chest, dropper, smooth stone (slab), observer, smoker, blast furnace, stonecutter, sticky piston, piston, piston head, gravel, suspicious gravel, acacia log (side), cauldron (including cauldrons with water, lava, or powdered snow), hopper, copper ore, crafter, vault, trial spawner, pale oak wood, pale oak log (side), infested block‌[BE only] (not including infested deepslate), heavy core"
+12 WATER,,"64, 64, 255","kelp, seagrass, water, bubble column, waterlogged leaves"
+13 WOOD,,"143, 119, 72","oak (planks, log (vertical), stripped log, wood, stripped wood, sign, door, pressure plate, fence, trapdoor, fence gate, slab, stairs), note block, bookshelf, chest, crafting table, trapped chest, daylight detector, loom, barrel, cartography table, fletching table, lectern, smithing table, composter, bamboo sapling, dead bush, petrified oak slab, beehive, banners (all colors, when not as markers)"
+14 QUARTZ,,"255, 252, 245","diorite (stairs, slab, wall), polished diorite (stairs, slab), birch log (side), quartz block (all variants, all slabs, all stairs), sea lantern, target, pale oak (planks, log (vertical), stripped log, stripped wood, sign, pressure plate, trapdoor, stairs, slab, fence gate, fence, door)"
+15 COLOR_ORANGE,,"216, 127, 51","acacia (planks, log (vertical), stripped log, stripped wood‌[JE only], sign, trapdoor, slab, stairs, pressure plate, fence gate, fence, door), red sand, orange (wool, carpet, shulker box, bed (foot), stained glass, glazed terracotta, concrete, concrete powder, candle), pumpkin, carved pumpkin, jack o'lantern, terracotta, red sandstone (all variants, all stairs, all slabs, all walls), honey block, honeycomb block, block of copper (including all cut, waxed, stair, trapdoor‌[JE only], and slab variants), lightning rod, block of raw copper, creaking heart (all orientations, active & inactive), open eyeblossom"
+16 COLOR_MAGENTA,,"178, 76, 216","magenta (wool, carpet, shulker box, bed (foot), stained glass, glazed terracotta, concrete, concrete powder, candle), purpur (all variants, slab, stairs)"
+17 COLOR_LIGHT_BLUE,,"102, 153, 216","light blue (wool, carpet, shulker box, bed (foot), stained glass, glazed terracotta, concrete, concrete powder, candle), soul fire"
+18 COLOR_YELLOW,,"229, 229, 51","yellow (wool, carpet, shulker box, bed (foot), stained glass, glazed terracotta, concrete, concrete powder, candle), bamboo (planks, stripped, sign, door, pressure plate, fence, trapdoor, fence gate, slab, stairs), bamboo mosaic (slab, stairs), sponge, wet sponge, hay bale, horn coral (coral block, coral‌[JE only], coral fan‌[JE only]), bee nest, short_dry_grass, tall_dry_grass"
+19 COLOR_LIGHT_GREEN,,"127, 204, 25","lime (wool, carpet, shulker box, bed (foot), stained glass, glazed terracotta, concrete, concrete powder, candle), melon"
+20 COLOR_PINK,,"242, 127, 165","pink (wool, carpet, shulker box, bed (foot), stained glass, glazed terracotta, concrete, concrete powder, candle), brain coral (coral block, coral‌[JE only], coral fan‌[JE only]), pearlescent froglight, cherry leaves, cherry sapling, cactus flower"
+21 COLOR_GRAY,,"76, 76, 76","gray (wool, carpet, shulker box, bed (foot), stained glass, glazed terracotta, concrete, concrete powder, candle), acacia wood, stripped wood‌[BE only], dead coral (coral block, coral, coral fan), tinted glass"
+22 COLOR_LIGHT_GRAY,,"153, 153, 153","light gray (wool, carpet, shulker box, bed (foot), stained glass, glazed terracotta, concrete, concrete powder, candle), structure block, jigsaw block, pale moss carpet, pale moss block, test_block‌[JE only]"
+23 COLOR_CYAN,,"76, 127, 153","cyan (wool, carpet, shulker box, bed (foot), stained glass, glazed terracotta, concrete, concrete powder, candle), prismarine (slab, stairs, wall), warped ( roots, fungus), twisting vines, nether sprouts, sculk sensor‌[JE only], warped (pressure plate‌[BE only], sign‌[BE only], slab‌[BE only], trapdoor‌[BE only], fence‌[BE only])"
+24 COLOR_PURPLE,,"127, 63, 178","shulker box, purple (wool, carpet, shulker box‌[BE only], bed (foot), stained glass, glazed terracotta, concrete, concrete powder, candle), mycelium, chorus plant, chorus flower, repeating command block, bubble coral (coral block, coral‌[JE only], coral fan‌[JE only]), amethyst block, budding amethyst, amethyst cluster, amethyst bud (all sizes)"
+25 COLOR_BLUE,,"51, 76, 178","blue (wool, carpet, shulker box, bed (foot), stained glass, glazed terracotta, concrete, concrete powder, candle), tube coral (coral block, coral‌[JE only], coral fan‌[JE only])"
+26 COLOR_BROWN,,"102, 76, 51","brown (wool, carpet, shulker box, bed (foot), stained glass, glazed terracotta, concrete, concrete powder, candle), dark oak (planks, log, stripped log, wood, stripped wood, sign, pressure plate, trapdoor, stairs, slab, fence gate, fence, door), soul sand, command block, brown mushroom, soul soil, leaf litter"
+27 COLOR_GREEN,,"102, 127, 51","green (wool, carpet, shulker box, bed (foot), stained glass, glazed terracotta, concrete, concrete powder, candle), end portal frame, chain command block, sea pickle, moss carpet, moss block, dried kelp block"
+28 COLOR_RED,,"153, 51, 51","red (wool, carpet, shulker box, bed (foot), stained glass, glazed terracotta, concrete, concrete powder, candle), bricks (slab, stairs, wall), red mushroom block, nether wart, enchanting table, nether wart block, fire coral (coral block, coral‌[JE only], coral fan‌[JE only]), red mushroom, shroomlight, mangrove (planks, log (vertical), stripped log, wood, stripped wood, sign, door, pressure plate, fence, trapdoor, fence gate, slab, stairs), sniffer egg"
+29 COLOR_BLACK,,"25, 25, 25","black (wool, carpet, shulker box, bed (foot), stained glass, glazed terracotta, concrete, concrete powder, candle), obsidian, end portal, dragon egg, block of coal, end gateway, basalt, polished basalt, smooth basalt, block of netherite, ancient debris, crying obsidian, respawn anchor, blackstone (all variants, all stairs, all slabs, all walls), gilded blackstone, sculk, sculk vein, sculk catalyst, sculk shrieker, sculk sensor‌[BE only]"
+30 GOLD,,"250, 238, 77","block of gold, light weighted pressure plate, bell, block of raw gold"
+31 DIAMOND,,"92, 219, 213","block of diamond, beacon, prismarine bricks (slab, stairs), dark prismarine (slab, stairs), conduit"
+32 LAPIS,,"74, 128, 255",block of lapis lazuli
+33 EMERALD,,"0, 217, 58",block of emerald
+34 PODZOL,,"129, 86, 49","podzol, spruce (planks, log (vertical), stripped log, wood, stripped wood, sign, pressure plate, trapdoor, stairs, slab, fence gate, fence, door), oak log (side), jungle log (side), campfire, soul campfire, mangrove log (side), mangrove roots, muddy mangrove roots"
+35 NETHER,,"112, 2, 0","netherrack, nether bricks (fence, slab, stairs, wall, chiseled, cracked), nether gold ore, nether quartz ore, magma block, red nether bricks (slab, stairs, wall), crimson (roots, fungus), weeping vines, crimson (pressure plate‌[BE only], sign‌[BE only], slab‌[BE only], trapdoor‌[BE only], fence‌[BE only])"
+36 TERRACOTTA_WHITE,,"209, 177, 161","white terracotta, calcite, cherry (planks, log (vertical), stripped log (vertical), sign, pressure plate, trapdoor, stairs, slab, fence gate, fence, door)"
+37 TERRACOTTA_ORANGE,,"159, 82, 36","orange terracotta, redstone lamp‌[JE only], resin bricks (fence, slab, stairs, wall, chiseled)"
+38 TERRACOTTA_MAGENTA,,"149, 87, 108",magenta terracotta
+39 TERRACOTTA_LIGHT_BLUE,,"112, 108, 138",light blue terracotta
+40 TERRACOTTA_YELLOW,,"186, 133, 36",yellow terracotta
+41 TERRACOTTA_LIGHT_GREEN,,"103, 117, 53",lime terracotta
+42 TERRACOTTA_PINK,,"160, 77, 78","pink terracotta, cherry (stripped log (side), stripped wood)"
+43 TERRACOTTA_GRAY,,"57, 41, 35","gray terracotta, cherry log (side), cherry wood, tuff (all variants, all slabs, all stairs, all walls)"
+44 TERRACOTTA_LIGHT_GRAY,,"135, 107, 98","light gray terracotta, exposed copper (including all cut, waxed, stair, trapdoor‌[JE only] and slab variants), mud bricks (slab, stairs, wall)"
+45 TERRACOTTA_CYAN,,"87, 92, 92","cyan terracotta, mud"
+46 TERRACOTTA_PURPLE,,"122, 73, 88","purple (terracotta, shulker box‌[JE only])"
+47 TERRACOTTA_BLUE,,"76, 62, 92",blue terracotta
+48 TERRACOTTA_BROWN,,"76, 50, 35","brown terracotta, pointed dripstone‌[JE only], dripstone block"
+49 TERRACOTTA_GREEN,,"76, 82, 42","green terracotta, closed eyeblossom"
+50 TERRACOTTA_RED,,"142, 60, 46","red terracotta, decorated pot"
+51 TERRACOTTA_BLACK,,"37, 22, 16",black terracotta
+52 CRIMSON_NYLIUM,,"189, 48, 49",crimson nylium
+53 CRIMSON_STEM,,"148, 63, 97","crimson (door, stairs, stem, stripped stem, fence gate, planks, pressure plate‌[JE only], sign‌[JE only], slab‌[JE only], trapdoor‌[JE only], fence‌[JE only])"
+54 CRIMSON_HYPHAE,,"92, 25, 29","crimson (hyphae, stripped hyphae)"
+55 WARPED_NYLIUM,,"22, 126, 134","warped nylium, oxidized copper (including all cut, waxed, stair, trapdoor‌[JE only], and slab variants)"
+56 WARPED_STEM,,"58, 142, 140","warped (door, stairs, stem, stripped stem, fence gate, planks, pressure plate‌[JE only], sign‌[JE only], slab‌[JE only], trapdoor‌[JE only], fence‌[JE only]), weathered copper (including all cut, waxed, stair, trapdoor‌[JE only], and slab variants)"
+57 WARPED_HYPHAE,,"86, 44, 62","warped (hyphae, stripped hyphae)"
+58 WARPED_WART_BLOCK,,"20, 180, 133",warped wart block
+59 DEEPSLATE,,"100, 100, 100","deepslate (gold ore, iron ore, coal ore, lapis ore, diamond ore, redstone ore, emerald ore, copper ore), deepslate (all variants, all stairs, all slabs, and all walls), infested deepslate , reinforced deepslate"
+60 RAW_IRON,,"216, 175, 147",block of raw iron
+61 GLOW_LICHEN,,"127, 167, 150","glow lichen, verdant froglight"

@@ -2,11 +2,12 @@
 name = "mapart"
 version = "0.0.0"
 dependencies = [
-	"numpy",
 	"matplotlib",
+	"numpy",
+	"pandas",
 	"pillow",
-	"pyyaml",
 	"pytest",
+	"pyyaml",
 ]
 
 [build-system]
