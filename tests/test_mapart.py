@@ -1,5 +1,6 @@
 from mapart import Mapart, Palette
 import numpy as np
+from PIL import Image as img
 
 COLOR_TABLE_FP = "res/map_colors_1.21.csv"
 
@@ -32,5 +33,12 @@ def test_palette_shades_tool ():
     assert np.allclose(palette.ids[0:4], np.array([4, 5, 6, 7]))
     assert np.allclose(palette.colors[1], 220/255*np.array([127, 178, 56]))
 
+def test_direct ():
+    palette = Palette(COLOR_TABLE_FP, mode="tool")
+    art = Mapart("res/nozomap128.jpg", scheme="direct")
+    im = art.generate(palette.colors)
+    im[255]
+    im = img.fromarray(np.floor(im/255))
+    im.save("tmp/nozotest.jpg")
 
 

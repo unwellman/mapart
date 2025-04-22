@@ -9,13 +9,32 @@ class Mapart:
     """ Methods specific to Minecraft map art
     """
     
-    def __init__ (self, fp):
+    def __init__ (self, fp, scheme="dither"):
         """ Initializer
         Load image with PIL and store with numpy array
         """
+        assert scheme in ["direct", "dither"]
+        self.scheme = scheme
         with img.open(fp) as im:
-            self.rgb = np.asarray(im)
+            self.rgb = np.array(im, dtype="float64")
         self.lc = img_proc.chroma(self.rgb)
+
+    def generate (self, palette):
+        """ Generate a map art based on the state of the object
+        """
+        if self.scheme == "dither":
+            pass
+        else: # self.scheme == "direct"
+            ret = np.zeros_like(self.rgb)
+            rows, cols, b = self.rgb.shape
+            for r in range(rows):
+                for c in range(cols):
+                    nearest, _ = img_proc.nearest(self.rgb[r, c, :], palette)
+                    ret[r, c] = nearest
+        return ret
+
+
+
 
 class Palette:
     """ Contain Minecraft block palette info including block names, slopes, and
