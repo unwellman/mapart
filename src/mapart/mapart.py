@@ -23,18 +23,20 @@ class Mapart:
     def generate (self, palette):
         """ Generate a map art based on the state of the object
         """
-        self._rgb = np.copy(self.rgb)
         if self.scheme == "dither":
-            rows, cols, b = self._rgb.shape
-            ret = np.zeros((rows+1, cols+2, b), dtype="float64")
+            rows, cols, b = self.rgb.shape
+            self._rgb = np.zeros((rows+1, cols+2, b), dtype="float64")
+            self._rgb[0:rows, 1:cols+1] = self.rgb
+            ret = np.zeros_like(self.rgb)
             idx = np.empty((rows, cols), dtype=np.int32)
-            for r in range(rows-1): # last row is padding
-                for c in range(1, cols-1): # first and last cols are padding
+            for r in range(rows):
+                for c in range(1, cols+1):
                     nearest, i = img_proc.nearest(self._rgb[r, c, :], palette)
-                    ret[r, c] = nearest
-                    idx[r, c] = i
+                    ret[r, c-1] = nearest
+                    idx[r, c-1] = i
                     self.__dither(r, c, nearest)
         else: # self.scheme == "direct"
+            self._rgb = np.copy(self.rgb)
             ret = np.zeros_like(self._rgb)
             rows, cols, b = self._rgb.shape
             idx = np.empty((rows, cols), dtype=np.int32)
