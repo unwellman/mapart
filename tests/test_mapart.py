@@ -34,11 +34,18 @@ def test_palette_shades_tool ():
     assert np.allclose(palette.colors[1], 220/255*np.array([127, 178, 56]))
 
 def test_direct ():
-    palette = Palette(COLOR_TABLE_FP, mode="tool")
+    palette = Palette(COLOR_TABLE_FP, mode="stairs")
     art = Mapart("res/nozomap128.jpg", scheme="direct")
-    im = art.generate(palette.colors)
-    im[255]
-    im = img.fromarray(np.floor(im/255))
+    im, idx = art.generate(palette.colors)
+    im = img.fromarray(im)
     im.save("tmp/nozotest.jpg")
+
+def test_dither ():
+    palette = Palette(COLOR_TABLE_FP, mode="stairs")
+    art = Mapart("res/nozomap128.jpg", scheme="dither",
+                 dither_weight=0.75)
+    im, idx = art.generate(palette.colors)
+    im = img.fromarray(im)
+    im.save("tmp/nozotest_fs.jpg")
 
 

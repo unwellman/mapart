@@ -9,12 +9,13 @@ class Mapart:
     """ Methods specific to Minecraft map art
     """
     
-    def __init__ (self, fp, scheme="dither"):
+    def __init__ (self, fp, scheme="dither", dither_weight=1.0):
         """ Initializer
         Load image with PIL and store with numpy array
         """
         assert scheme in ["direct", "dither"]
         self.scheme = scheme
+        self.dither_weight = dither_weight
         with img.open(fp) as im:
             self.rgb = np.array(im, dtype="float64")
         self.lc = img_proc.chroma(self.rgb)
@@ -22,18 +23,35 @@ class Mapart:
     def generate (self, palette):
         """ Generate a map art based on the state of the object
         """
+        self._rgb = np.copy(self.rgb)
         if self.scheme == "dither":
-            pass
+            rows, cols, b = self._rgb.shape
+            ret = np.zeros((rows+1, cols+2, b), dtype="float64")
+            idx = np.empty((rows, cols), dtype=np.int32)
+            for r in range(rows-1): # last row is padding
+                for c in range(1, cols-1): # first and last cols are padding
+                    nearest, i = img_proc.nearest(self._rgb[r, c, :], palette)
+                    ret[r, c] = nearest
+                    idx[r, c] = i
+                    self.__dither(r, c, nearest)
         else: # self.scheme == "direct"
-            ret = np.zeros_like(self.rgb)
-            rows, cols, b = self.rgb.shape
+            ret = np.zeros_like(self._rgb)
+            rows, cols, b = self._rgb.shape
+            idx = np.empty((rows, cols), dtype=np.int32)
             for r in range(rows):
                 for c in range(cols):
-                    nearest, _ = img_proc.nearest(self.rgb[r, c, :], palette)
+                    nearest, i = img_proc.nearest(self._rgb[r, c, :], palette)
                     ret[r, c] = nearest
-        return ret
+                    idx[r, c] = i
+        return ret.astype(np.uint8), idx
 
-
+    def __dither (self, r, c, nearest):
+        err = self._rgb[r, c, :] - nearest
+        err *= self.dither_weight
+        self._rgb[r    , c + 1, :] += 7/16*err;
+        self._rgb[r + 1, c - 1, :] += 3/16*err;
+        self._rgb[r + 1, c    , :] += 5/16*err;
+        self._rgb[r + 1, c + 1, :] += 1/16*err;
 
 
 class Palette:
