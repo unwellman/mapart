@@ -2,7 +2,7 @@ import numpy as np
 import PIL
 
 # Courtesy of Wikipedia: convert rgb to brightness/hue/saturation
-perception_matrix = np.array([[0.2126, 0.7512, 0.0722],
+perception_matrix = np.array([[0.299, 0.587, 0.114],
                               [1.0, -0.5, -0.5],
                               [0.0, np.sqrt(3)/2, -np.sqrt(3)/2]])
 perception_matrix_inv = np.linalg.inv(perception_matrix)
@@ -32,9 +32,9 @@ def chroma (rgb, axis=-1):
         return perception_matrix @ rgb
     shp = rgb.shape
     assert shp[-1] == 3
-    ret = np.reshape(rgb, (3, np.prod(shp[0:-1])))
-    ret = perception_matrix.T @ ret
-    return np.reshape(ret, shp)
+    ret = np.reshape(rgb, (np.prod(shp[0:-1]), 3))
+    ret = perception_matrix @ ret.T
+    return np.reshape(ret.T, shp)
 
 def rgb (chroma):
     """Compute rgb from luma and chroma values
@@ -44,6 +44,6 @@ def rgb (chroma):
         return perception_matrix_inv @ rgb
     shp = rgb.shape
     assert shp[-1] == 3
-    ret = np.reshape(rgb, (3, np.prod(shp[0:-1])))
-    ret = perception_matrix_inv.T @ ret
-    return np.reshape(ret, shp)
+    ret = np.reshape(rgb, (np.prod(shp[0:-1]), 3))
+    ret = perception_matrix_inv @ ret.T
+    return np.reshape(ret.T, shp)

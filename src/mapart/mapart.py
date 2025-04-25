@@ -9,7 +9,7 @@ class Mapart:
     """ Methods specific to Minecraft map art
     """
     
-    def __init__ (self, fp, scheme="dither", dither_weight=1.0):
+    def __init__ (self, fp, scheme="dither", dither_weight=1.0, luma_weight=None):
         """ Initializer
         Load image with PIL and store with numpy array
         """
@@ -18,7 +18,6 @@ class Mapart:
         self.dither_weight = dither_weight
         with img.open(fp) as im:
             self.rgb = np.array(im, dtype="float64")
-        self.lc = img_proc.chroma(self.rgb)
 
     def generate (self, palette):
         """ Generate a map art based on the state of the object
@@ -75,6 +74,16 @@ class Palette:
 
         self.frame = self.__format_frame(frm)
         self.ids, self.colors = self.__init_palette(mode)
+
+    def get_image_index (self, idx):
+        """ Turn an np.array of indices into a PIL image
+        """
+        assert idx.ndim == 2
+        ret = np.empty((*(idx.shape), 3), dtype="float64")
+        for r in range(idx.shape[0]):
+            for c in range(idx.shape[1]):
+                ret[r, c, :] = self.colors[idx[r, c]]
+        return img.fromarray(ret.astype(np.uint8))
 
     def __format_frame (self, frame):
         frame.pop("Color") # Empty column
